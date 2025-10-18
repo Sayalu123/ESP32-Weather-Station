@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 38.4, "left": 4.84, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 9.9,
+      "left": -187.8,
+      "attrs": { "temperature": "-1.5", "humidity": "80" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 223.94,
+      "left": -153.37,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": 71.2,
+      "left": 279.5,
+      "attrs": { "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:GND", "esp:GND.2", "violet", [ "v-96", "h182.4" ] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "oled1:GND", "esp:GND.3", "blue", [ "v0" ] ],
+    [ "oled1:VCC", "esp:3V3", "yellow", [ "v0" ] ],
+    [ "esp:22", "oled1:SCL", "#8f4814", [ "h0" ] ],
+    [ "oled1:SDA", "esp:21", "orange", [ "v0" ] ],
+    [ "esp:4", "dht1:SDA", "green", [ "h0" ] ],
+    [ "rgb1:R", "esp:25", "red", [ "v0" ] ],
+    [ "rgb1:G", "esp:26", "green", [ "v0" ] ],
+    [ "rgb1:B", "esp:27", "blue", [ "v0" ] ],
+    [ "rgb1:COM", "esp:GND.3", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
