@@ -21,7 +21,7 @@ simulated entirely in [Wokwi](https://wokwi.com/).
 ## 💻 How to Run
 1. Go to [https://wokwi.com](https://wokwi.com).
 2. Create a new project → select **ESP32**.
-3. Copy and paste the code from `wifi-scan/wifi-scan.ino`.
+3. Copy and paste the code from `Weather_station/Weather_station.ino`.
 4. Add the libraries listed in `libraries.txt`.
 5. Click **Start Simulation** to view live readings on the OLED display.
 
@@ -35,3 +35,4 @@ simulated entirely in [Wokwi](https://wokwi.com/).
 👩‍💻 **Developed by:** Sayali Mangale
 💡 **Simulated on:** Wokwi IoT Platform  
 ✨ **Languages Used:** C++ / Arduino Framework
+
